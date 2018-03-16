@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.7" method="upgrade">
+	<name>Gileba Package</name>
+	<author>Gijs Lamon</author>
+	<creationDate>2018-03-16</creationDate>
+	<packagename>gileba</packagename>
+	<version>1.0.0-dev.1</version>
+	<packager>Gijs Lamon</packager>
+	<infourl title="Gileba Template Package">https://github.com/Gileba/tpl_gileba/releases/tag/1.0.0-dev.1</infourl>
+	<description>Package containing the template and its dependancies for Gileba</description>
+	<files folder="packages">
+		<file type="template" id="gileba" client="site">tpl_gileba.zip</file>
+		<file type="plugin" id="templatecompanion" group="system">plg_system_templatecompanion.zip</file>
+	</files>
+	<updateservers>
+		<server type="extension" name="Gileba Template Package">http://www.gileba.be/updates/tpl_gileba.xml</server>
+	</updateservers>
+</extension>
