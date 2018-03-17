@@ -8,10 +8,28 @@
  */
 
 defined('_JEXEC') or die;
+
+/** @var JDocumentHtml $this */
+
+$app  = JFactory::getApplication();
+
+// Detecting Active Variables
+$option   = $app->input->getCmd('option', '');
+$view     = $app->input->getCmd('view', '');
+$layout   = $app->input->getCmd('layout', '');
+$task     = $app->input->getCmd('task', '');
+$itemid   = $app->input->getCmd('Itemid', '');
+
 ?>
+
 <!DOCTYPE html>
 <html>
-<body>
+<body class="<?php echo $option
+	. ' view-' . $view
+	. ($layout ? ' layout-' . $layout : ' no-layout')
+	. ($task ? ' task-' . $task : ' no-task')
+	. ($itemid ? ' itemid-' . $itemid : '');
+?>">
   <div>
     <jdoc:include type="component" />
   </div>
