@@ -19,22 +19,23 @@ $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
 /*
 *	Mobile device detection
 */
-if( !function_exists('mobile_user_agent_switch') ){
-	function mobile_user_agent_switch(){
+if(!function_exists('mobile_user_agent_switch')){
+	function mobile_user_agent_switch()
+	{
 		$device = '';
-	
-		if( stristr($_SERVER['HTTP_USER_AGENT'],'ipad') ) {
+
+		if(stristr($_SERVER['HTTP_USER_AGENT'], 'ipad')) {
 			$device = "ipad";
-		} else if( stristr($_SERVER['HTTP_USER_AGENT'],'iphone') || strstr($_SERVER['HTTP_USER_AGENT'],'iphone') ) {
+		} elseif(stristr($_SERVER['HTTP_USER_AGENT'], 'iphone') || strstr($_SERVER['HTTP_USER_AGENT'], 'iphone')) {
 			$device = "iphone";
-		} else if( stristr($_SERVER['HTTP_USER_AGENT'],'blackberry') ) {
+		} elseif(stristr($_SERVER['HTTP_USER_AGENT'], 'blackberry')) {
 			$device = "blackberry";
-		} else if( stristr($_SERVER['HTTP_USER_AGENT'],'android') ) {
+		} elseif(stristr($_SERVER['HTTP_USER_AGENT'], 'android')) {
 			$device = "android";
 		}
-	
-		if( $device ) {
-			return "mobile"; 
+
+		if($device) {
+			return "mobile";
 		} return false; {
 			return false;
 		}
