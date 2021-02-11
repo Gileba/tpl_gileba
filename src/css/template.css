@@ -22,11 +22,20 @@
 		background-color: var(--dark-background);
 		color: white;
 	}
+
+	.navigation a {
+		color: white;
+	}
 }
 
 a {
 	text-decoration: none;
 	color: var(--global-color-black);
+}
+
+ul {
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 .container {
@@ -48,7 +57,7 @@ a {
 .navigation {
 	text-transform: uppercase;
 	font-size: 0.9em;
-	padding-top: 12px;
+	padding-top: 24px;
 }
 
 .navigation .nav {
@@ -60,4 +69,59 @@ a {
 
 .navigation .nav li {
 	margin-left: var(--space-medium);
+}
+
+h1 {
+	font-size: 1.6em;
+	text-transform: uppercase;
+	color: var(--global-color-primary);
+	margin-block-end: 0;
+	margin-block-start: 0;
+}
+
+h2 {
+	font-size: 1.33em;
+	font-weight: bolder;
+}
+
+.home {
+	margin-bottom: var(--space-large);
+}
+
+.home .moduletable {
+	margin: var(--space-large) var(--space-medium) 0;
+}
+
+.home h1 {
+	text-align: center;
+}
+
+.home .category-module {
+	display: flex;
+	flex-wrap: nowrap;
+	list-style: none;
+	flex-basis: 50%;
+}
+
+.home .category-module li {
+	margin: var(--space-medium) var(--space-small) 0;
+	width: 50%;
+}
+
+.home .category-module li .mod-articles-category-readmore {
+	margin-top: var(--space-small);
+	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
+	width: fit-content;
+	padding: 8px 3px;
+}
+
+.home .category-module li .mod-articles-category-readmore a {
+	color: white;
+	text-transform: uppercase;
+	padding: 5px;
+}
+
+.home .category-module li .mod-articles-category-readmore a:hover {
+	background-color: white;
+	color: var(--global-color-black);
 }

@@ -9,11 +9,18 @@
 	<license>GNU/GPL</license>
 	<version>1.0.0-dev.1</version>
 	<description>Gileba</description>
+	<folders>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>webfonts</folder>
+	</folders>
 	<files>
 		<filename>templateDetails.xml</filename>
 		<filename>index.php</filename>
 	</files>
 	<positions>
 		<position>nav</position>
+		<position>home</position>
 	</positions>
 </extension>

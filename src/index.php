@@ -63,8 +63,13 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 				<jdoc:include type="modules" name="nav" />
 			</div>
 		</div>
+		<div class="home">
+			<?php if ($menu->getActive() == $menu->getDefault()) : ?><jdoc:include type="modules" name="home" /><?php
+			endif ?>
+		</div>
 		<div class="component">
-			<jdoc:include type="component" />
+			<?php if ($menu->getActive() != $menu->getDefault()) : ?><jdoc:include type="component" /><?php
+			endif ?>
 		</div>
 	</div>
 </body>
