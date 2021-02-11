@@ -9,6 +9,9 @@
 	--global-color-secondary: #8ec3be;
 	--global-color-tertiary: #e6fac5;
 	--dark-background: #1d3e3f;
+	--space-small: 20px;
+	--space-medium: 45px;
+	--space-large: 120px;
 	font-family: "MuseoSans-500";
 	font-size: 15px;
 	color: var(--global-color-black);
@@ -19,4 +22,43 @@
 		background-color: var(--dark-background);
 		color: white;
 	}
+}
+
+a {
+	text-decoration: none;
+	color: var(--global-color-black);	
+}
+
+.container {
+	max-width: 940px;
+	margin: auto;
+}
+
+.top {
+	display: flex;
+	padding: var(--space-small);
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.logo img {
+	max-width: 130px;
+}
+
+.navigation {
+	text-transform: uppercase;
+	font-size: 0.9em;
+	height: 100%;
+	padding-top: 12px;
+}
+
+.navigation .nav {
+	list-style: none;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+}
+
+.navigation .nav li {
+	margin-left: var(--space-medium);
 }
