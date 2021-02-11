@@ -1,36 +1,31 @@
 language: php
 php:
-- '5.6'
-- '7.0'
-- '7.1'
-- '7.2'
-- nightly
-env:
-  matrix:
-  - DB=mysql
-matrix:
+- '7.4'
+- 'nightly'
+jobs:
   allow_failures:
-  - php: nightly
+    - php: 'nightly'
 before_script:
+- composer require --dev phpunit/phpunit $PHPUNIT_VERSION
+- composer require --dev phpunit/php-code-coverage
 - phpenv config-rm xdebug.ini
 script:
-- phpunit --configuration travisci-phpunit.xml --no-configuration tests
+- ./vendor/bin/phpunit --configuration travisci-phpunit.xml --no-configuration tests
 before_deploy:
 - cd ..
 - mkdir packages
-- zip -r packages/tpl_gileba.zip gileba -x \*.git\* \*tests\* *travisci-phpunit.xml*
-  *.travis.yml* *pkg_gileba.xml* *tpl_gileba.xml*
+- zip -r packages/tpl_gileba.zip tpl_gileba/src -x \*.git\*
 - git clone -b 1.0.0 https://github.com/Gileba/plg_system_templatecompanion.git plg_system_templatecompanion
-- zip -r packages/plg_system_templatecompanion.zip plg_system_templatecompanion/src -x \*.git\* *.gitignore*
-- cp gileba/pkg_gileba.xml pkg_gileba.xml
+- cd plg_system_templatecompanion/src; zip -r ../../packages/plg_system_templatecompanion.zip * -x \*.git\* *.gitignore*; cd ../../
+- cp tpl_gileba/pkg_gileba.xml pkg_gileba.xml
 - zip pkg_gileba packages/tpl_gileba.zip packages/plg_system_templatecompanion.zip pkg_gileba.xml
 deploy:
   provider: releases
+  edge: true
   file:
   - packages/tpl_gileba.zip
   - pkg_gileba.zip
-  skip_cleanup: true
   on:
     tags: true
-  api_key: $GITHUB_TOKEN
-after_deploy: curl -T gileba/tpl_gileba.xml -u $FTP_USER:$FTP_PASSWORD $FTP_SERVER
+  token: $GITHUB_TOKEN
+after_deploy: curl -T tpl_gileba/tpl_gileba.xml -u $FTP_USER:$FTP_PASSWORD $FTP_SERVER

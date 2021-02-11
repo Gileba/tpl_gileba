@@ -6,7 +6,7 @@
 		<element>pkg_gileba</element>
 		<type>package</type>
 		<version>1.0.0-dev.1</version>
-		<infourl title="TTactua Mobile Template Package">https://github.com/Gileba/tpl_gileba/releases/tag/1.0.0-dev.1</infourl>
+		<infourl title="Gileba Template Package">https://github.com/Gileba/tpl_gileba/releases/tag/1.0.0-dev.1</infourl>
 		<downloads>
 			<downloadurl type="full" format="zip">https://github.com/Gileba/tpl_gileba/releases/download/1.0.0-dev.1/pkg_gileba.zip</downloadurl>
 		</downloads>
@@ -14,22 +14,6 @@
 			<tag>development</tag>
 		</tags>
 		<targetplatform name="joomla" version="3.[789]"/>
-		<client>0</client>
-	</update>
-	<update>
-		<name>Gileba Template (Package)</name>
-		<description>Gileba Template (Package)</description>
-		<element>pkg_gileba</element>
-		<type>package</type>
-		<version>1.0.0-dev.1</version>
-		<infourl title="TTactua Mobile Template Package">https://github.com/Gileba/tpl_gileba/releases/tag/1.0.0-dev.1</infourl>
-		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/Gileba/tpl_gileba/releases/download/1.0.0-dev.1/pkg_gileba.zip</downloadurl>
-		</downloads>
-		<tags>
-			<tag>development</tag>
-		</tags>
-		<targetplatform name="joomla" version="4.[0123456789]"/>
 		<client>0</client>
 	</update>
 </updates>
