@@ -29,10 +29,26 @@ a {
 	color: var(--global-color-black);
 }
 
+.container {
+	max-width: 940px;
+	margin: auto;
+}
+
+.top {
+	display: flex;
+	padding: var(--space-small);
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.logo img {
+	max-width: 130px;
+}
+
 .navigation {
 	text-transform: uppercase;
 	font-size: 0.9em;
-	padding: var(--space-small);
+	padding-top: 12px;
 }
 
 .navigation .nav {

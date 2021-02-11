@@ -53,8 +53,15 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 </head>
 <body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?> <?php echo mobile_user_agent_switch(); ?>">
 	<div class="container">
-		<div class="navigation">
-			<jdoc:include type="modules" name="nav" />			
+		<div class="top">
+			<div class="logo">
+				<a href="/">
+					<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/logo_liggend.png" alt="Gileba" />
+				</a>
+			</div>
+			<div class="navigation">
+				<jdoc:include type="modules" name="nav" />
+			</div>
 		</div>
 		<div class="component">
 			<jdoc:include type="component" />
