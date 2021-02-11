@@ -71,6 +71,9 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 			<?php if ($menu->getActive() != $menu->getDefault()) : ?><jdoc:include type="component" /><?php
 			endif ?>
 		</div>
+		<div class="footer">
+			<jdoc:include type="modules" name="footer" />
+		</div>
 	</div>
 </body>
 </html>
