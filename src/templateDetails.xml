@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9.24" type="template" method="upgrade">
+	<name>tpl_gileba</name>
+	<creationDate>2021-02-09</creationDate>
+	<author>Gijs Lamon</author>
+	<authorEmail>info@gileba.be</authorEmail>
+	<authorUrl>http://www.gileba.be/</authorUrl>
+	<copyright>(c) 2021 by Gileba</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0.0-dev.1</version>
+	<description>Gileba</description>
+	<files>
+		<filename>templateDetails.xml</filename>
+		<filename>index.php</filename>
+	</files>
+	<positions>
+	</positions>
+</extension>
