@@ -90,6 +90,9 @@ defined('_JEXEC') or die;
 	<?php else : ?>
 		<?php foreach ($list as $item) : ?>
 			<li>
+				<div>
+					<?php echo JLayoutHelper::render('joomla.content.intro_image', $item); ?>
+				</div>
 				<h2>
 				<?php if ($params->get('link_titles') == 1) : ?>
 					<a class="mod-articles-category-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
