@@ -22,5 +22,6 @@
 	<positions>
 		<position>nav</position>
 		<position>home</position>
+		<position>footer</position>
 	</positions>
 </extension>
