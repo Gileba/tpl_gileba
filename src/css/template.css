@@ -9,6 +9,9 @@
 	--global-color-secondary: #8ec3be;
 	--global-color-tertiary: #e6fac5;
 	--dark-background: #1d3e3f;
+	--space-small: 20px;
+	--space-medium: 45px;
+	--space-large: 120px;
 	font-family: "MuseoSans-500";
 	font-size: 15px;
 	color: var(--global-color-black);
@@ -19,4 +22,26 @@
 		background-color: var(--dark-background);
 		color: white;
 	}
+}
+
+a {
+	text-decoration: none;
+	color: var(--global-color-black);	
+}
+
+.navigation {
+	text-transform: uppercase;
+	font-size: 0.9em;
+	padding: var(--space-small);
+}
+
+.navigation .nav {
+	list-style: none;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+}
+
+.navigation .nav li {
+	margin-left: var(--space-medium);
 }

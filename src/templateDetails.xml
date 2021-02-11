@@ -14,5 +14,6 @@
 		<filename>index.php</filename>
 	</files>
 	<positions>
+		<position>nav</position>
 	</positions>
 </extension>
