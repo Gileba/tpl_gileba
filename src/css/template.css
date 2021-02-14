@@ -18,7 +18,7 @@
 }
 
 body {
-	margin: 0;	
+	margin: 0;
 }
 
 a {
@@ -176,12 +176,12 @@ h2 {
 	.footer a {
 		color: var(--global-color-secondary);
 	}
-	
+
 	.contact {
 		background-color: var(--global-color-black);
 		background-image: none;
 	}
-	
+
 	.contact h1 {
 		color: white;
 	}
