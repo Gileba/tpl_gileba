@@ -17,6 +17,14 @@
 	color: var(--global-color-black);
 }
 
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
 a {
 	text-decoration: none;
 	color: var(--global-color-black);
@@ -25,9 +33,13 @@ a {
 ul {
 	margin-block-start: 0;
 	margin-block-end: 0;
+input, textarea {
+	border: solid var(--global-color-black) 1px !important;
+	background-color: transparent;
+	font-size: 1em;
 }
 
-.container {
+.container, .contact .moduletable, .footer .custom {
 	max-width: 940px;
 	margin: auto;
 }
@@ -77,6 +89,7 @@ h2 {
 	font-size: 0.6em;
 	color: var(--global-color-primary);
 	font-style: italic;
+	margin: var(--space-small);
 }
 
 .footer a {
@@ -107,14 +120,14 @@ h2 {
 	width: 50%;
 }
 
-.home .category-module li .mod-articles-category-readmore {
+.home .category-module li .mod-articles-category-readmore, button {
 	margin-top: var(--space-small);
 	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
 	width: fit-content;
 	padding: 8px 3px;
 }
 
-.home .category-module li .mod-articles-category-readmore a {
+.home .category-module li .mod-articles-category-readmore a, button {
 	color: white;
 	text-transform: uppercase;
 	padding: 5px;
@@ -125,10 +138,104 @@ h2 {
 	color: var(--global-color-black);
 }
 
+.contact {
+	padding: 0 var(--space-small) var(--space-medium);
+	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
+	color: white;
+}
+
+.contact a {
+	color: white;
+}
+
+.contact .custom {
+	display: flex;
+}
+
+.contact .custom .data, .contact .custom .form {
+	width: 50%;
+}
+
+.contact h1 {
+	text-align: center;
+	padding: var(--space-medium) 0;
+	color: white;
+}
+
+.contact .data .name, .contact .data .adres, .contact .data .telefoon {
+	margin-bottom: var(--space-small);
+}
+
+.contact .data div:not(.btw) {
+	font-size: 1.06em;
+}
+
+.contact .data .btw {
+	font-style: italic;
+	font-size: 0.7em;
+}
+
+.contact .form input::placeholder, .contact .form textarea::placeholder {
+	color: white;
+	font-family: "MuseoSans-500";
+}
+
+.contact .form div[data-name="firstname"], .contact .form div[data-name="lastname"], .contact .form div[data-name="privacy"], .contact .form div[data-name^="submit"] {
+	width: 50%;
+}
+
+.contact .form div[data-name="firstname"] .cf-control-input {
+	margin-right: 10px;
+}
+
+.contact button {
+	background-image: none;
+	-webkit-appearance: button-bevel;
+	-moz-appearance: button-bevel;
+	appearance: button-bevel;
+	background-color: var(--global-color-black);
+	color: white;
+	font-family: "MuseoSans-500";
+	width: auto;
+	justify-self: flex-end;
+	margin-top: 0;
+}
+
+.contact button:hover {
+	cursor: pointer;
+}
+
+.cf-field-hp {
+	display: none;
+}
+
+.cf-control-group {
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.cf-width-auto {
+	width: 100%;
+}
+
+.cf-fields {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cf-text-right {
+	display: flex;
+	justify-content: flex-end;
+}
+
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: var(--dark-background);
 		color: white;
+	}
+
+	input, textarea {
+		border: solid var(--dark-background) 1px !important;
 	}
 
 	.navigation a {
@@ -141,5 +248,18 @@ h2 {
 
 	.footer a {
 		color: var(--global-color-secondary);
+	}
+
+	.contact {
+		background-color: var(--global-color-black);
+		background-image: none;
+	}
+
+	.contact h1 {
+		color: white;
+	}
+
+	.contact button {
+		background-color: var(--dark-background);
 	}
 }

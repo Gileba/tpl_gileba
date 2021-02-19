@@ -22,6 +22,7 @@
 	<positions>
 		<position>nav</position>
 		<position>home</position>
+		<position>contact</position>
 		<position>footer</position>
 	</positions>
 </extension>
