@@ -73,7 +73,7 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 		</div>
 	</div>
 	<?php if ($menu->getActive() == $menu->getDefault()) : ?>
-	<div class="contact">
+	<div id="contact" class="contact">
 		<jdoc:include type="modules" name="contact" />
 	</div>
 	<?php endif ?>
