@@ -1,0 +1,327 @@
+@font-face {
+	font-family: "MuseoSans-500";
+	src: url('../webfonts/museosans-500/font.woff2') format('woff2'), url('../webfonts/museosans-500/font.woff') format('woff');
+}
+
+:root {
+	--global-color-black: #584f4f;
+	--global-color-primary: #409eb2;
+	--global-color-secondary: #8ec3be;
+	--global-color-tertiary: #e6fac5;
+	--dark-background: #1d3e3f;
+	--space-small: 20px;
+	--space-medium: 45px;
+	--space-large: 120px;
+	font-family: "MuseoSans-500";
+	font-size: 15px;
+	color: var(--global-color-black);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: var(--global-color-black);
+}
+
+ul {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	padding-inline-start: 0;
+}
+
+input, textarea {
+	border: solid var(--global-color-black) 1px !important;
+	background-color: transparent;
+	font-size: 1em;
+}
+
+.container, .contact .moduletable, .footer .custom {
+	max-width: 940px;
+	margin: auto;
+}
+
+.top {
+	display: flex;
+	padding: var(--space-small);
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.logo img {
+	max-width: 130px;
+}
+
+.navigation {
+	text-transform: uppercase;
+	font-size: 0.9em;
+	padding-top: 24px;
+}
+
+.navigation .nav {
+	list-style: none;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+}
+
+.navigation .nav li {
+	margin-left: var(--space-medium);
+}
+
+h1 {
+	font-size: 1.6em;
+	text-transform: uppercase;
+	color: var(--global-color-primary);
+	margin-block-end: 0;
+	margin-block-start: 0;
+}
+
+h2 {
+	font-size: 1.33em;
+	font-weight: bolder;
+}
+
+.intro {
+	height: 400px;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.intro .cirkel {
+	background-color: white;
+	color: var(--global-color-secondary);
+	border-radius: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 50px;
+	width: 300px;
+	height: 300px;
+}
+
+.intro .cirkel .logo {
+	text-align: center;
+	width: 100%;
+}
+
+.intro .cirkel .baseline {
+	margin-top: -20px;
+}
+
+.footer {
+	font-size: 0.6em;
+	color: var(--global-color-primary);
+	font-style: italic;
+	margin: var(--space-small);
+}
+
+.footer a {
+	color: var(--global-color-primary);
+}
+
+.home {
+	margin-bottom: var(--space-large);
+}
+
+.home .moduletable {
+	margin: var(--space-large) var(--space-medium) 0;
+}
+
+.home h1 {
+	text-align: center;
+}
+
+.home .category-module {
+	display: flex;
+	flex-wrap: nowrap;
+	list-style: none;
+}
+
+.home .category-module li {
+	margin: var(--space-medium) var(--space-small) 0;
+	width: 50%;
+}
+
+.home .category-module li .mod-articles-category-readmore, button {
+	margin-top: var(--space-small);
+	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
+	width: fit-content;
+	padding: 8px 3px;
+}
+
+.home .category-module li .mod-articles-category-readmore a, button {
+	color: white;
+	text-transform: uppercase;
+	padding: 5px;
+}
+
+.home .category-module li .mod-articles-category-readmore a:hover {
+	background-color: white;
+	color: var(--global-color-black);
+}
+
+.contact {
+	padding: 0 var(--space-small) var(--space-medium);
+	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
+	color: white;
+}
+
+.contact a {
+	color: white;
+}
+
+.contact .custom {
+	display: flex;
+}
+
+.contact .custom .data, .contact .custom .form {
+	width: 50%;
+}
+
+.contact h1 {
+	text-align: center;
+	padding: var(--space-medium) 0;
+	color: white;
+}
+
+.contact .data .name, .contact .data .adres, .contact .data .telefoon {
+	margin-bottom: var(--space-small);
+}
+
+.contact .data div:not(.btw) {
+	font-size: 1.06em;
+}
+
+.contact .data .btw {
+	font-style: italic;
+	font-size: 0.7em;
+}
+
+.contact .form input::placeholder, .contact .form textarea::placeholder {
+	color: white;
+	font-family: "MuseoSans-500";
+}
+
+.contact .form div[data-name="firstname"], .contact .form div[data-name="lastname"], .contact .form div[data-name="privacy"], .contact .form div[data-name^="submit"] {
+	width: 50%;
+}
+
+.contact .form div[data-name="firstname"] .cf-control-input {
+	margin-right: 10px;
+}
+
+.contact button {
+	background-image: none;
+	-webkit-appearance: button-bevel;
+	-moz-appearance: button-bevel;
+	appearance: button-bevel;
+	background-color: var(--global-color-black);
+	color: white;
+	font-family: "MuseoSans-500";
+	width: auto;
+	justify-self: flex-end;
+	margin-top: 0;
+}
+
+.contact button:hover {
+	cursor: pointer;
+}
+
+.cf-field-hp {
+	display: none;
+}
+
+.cf-control-group {
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.cf-width-auto {
+	width: 100%;
+}
+
+.cf-fields {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cf-text-right {
+	display: flex;
+	justify-content: flex-end;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--dark-background);
+		color: white;
+	}
+
+	input, textarea {
+		border: solid var(--dark-background) 1px !important;
+	}
+
+	.intro .cirkel {
+		background-color: var(--dark-background);
+	}
+	
+	.navigation a {
+		color: white;
+	}
+
+	.footer {
+		color: var(--global-color-secondary);
+	}
+
+	.footer a {
+		color: var(--global-color-secondary);
+	}
+
+	.contact {
+		background-color: var(--global-color-black);
+		background-image: none;
+	}
+
+	.contact h1 {
+		color: white;
+	}
+
+	.contact button {
+		background-color: var(--dark-background);
+	}
+}
+
+@media screen and (max-width: 799px) {
+	.home .moduletable {
+		margin: var(--space-large) var(--space-small) 0;
+	}
+
+	.home .category-module {
+		flex-wrap: wrap;
+	}
+	
+	.home .category-module li {
+		width: 100%;
+	}
+	
+	.contact .custom {
+		flex-wrap: wrap;
+	}
+	
+	.contact .custom .data, .contact .custom .form {
+		width: 100%;
+	}
+	
+	.contact .custom .form {
+		margin-top: var(--space-medium);	
+	}
+}
