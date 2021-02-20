@@ -42,7 +42,7 @@ input, textarea {
 	font-size: 1em;
 }
 
-.container, .contact .moduletable, .footer .custom {
+.top, .home > div:not(.intro), .contact .moduletable, .footer .custom {
 	max-width: 940px;
 	margin: auto;
 }
@@ -131,10 +131,6 @@ h2 {
 
 .home {
 	margin-bottom: var(--space-large);
-}
-
-.home .moduletable {
-	margin: var(--space-large) var(--space-medium) 0;
 }
 
 .home h1 {
@@ -300,7 +296,7 @@ h2 {
 	}
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 599px) {
 	.home .moduletable {
 		margin: var(--space-large) var(--space-small) 0;
 	}
@@ -324,4 +320,19 @@ h2 {
 	.contact .custom .form {
 		margin-top: var(--space-medium);	
 	}
+}
+
+@media screen and (min-width: 1400px) {
+	.top, .home > div:not(.intro), .contact .moduletable, .footer .custom {
+		max-width: 1200px;
+		margin: auto;
+	}
+
+	body {
+		font-size: 20px;
+	}
+}
+
+.home > div.moduletable {
+	margin: var(--space-large) auto 0;
 }
