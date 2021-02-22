@@ -13,16 +13,27 @@
 		<folder>css</folder>
 		<folder>html</folder>
 		<folder>images</folder>
+		<folder>language</folder>
 		<folder>webfonts</folder>
 	</folders>
 	<files>
 		<filename>templateDetails.xml</filename>
 		<filename>index.php</filename>
 	</files>
+	<languages folder="language">
+		<language tag="nl-BE">nl-BE/nl-BE.tpl_gileba.sys.ini</language>
+	</languages>
 	<positions>
 		<position>nav</position>
 		<position>home</position>
 		<position>contact</position>
 		<position>footer</position>
 	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="google" label="TPL_GILEBA_GOOGLE">
+				<field name="tagmanager" type="textbox" default="" label="TPL_GILEBA_GOOGLE_TAGMANAGER" description="TPL_GILEBA_GOOGLE_TAGMANAGER_DESC" />
+			</fieldset>
+		</fields>
+	</config>
 </extension>
