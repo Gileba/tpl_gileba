@@ -42,7 +42,11 @@ input, textarea {
 	font-size: 1em;
 }
 
-.top, .home > div:not(.intro), .contact .moduletable, .footer .custom {
+img {
+	width: 100%;
+}
+
+.top, .component, .home > div:not(.intro), .contact .moduletable, .footer .custom {
 	max-width: 940px;
 	margin: auto;
 }
@@ -323,7 +327,7 @@ h2 {
 }
 
 @media screen and (min-width: 1400px) {
-	.top, .home > div:not(.intro), .contact .moduletable, .footer .custom {
+	.top, .home > div:not(.intro), .component, .contact .moduletable, .footer .custom {
 		max-width: 1200px;
 		margin: auto;
 	}
@@ -331,4 +335,13 @@ h2 {
 
 .home > div.moduletable {
 	margin: var(--space-large) auto 0;
+}
+
+.wrapper-2-columns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrapper-2-columns > * {
+	width: 45%;
 }
