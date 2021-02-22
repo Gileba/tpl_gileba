@@ -25,4 +25,11 @@
 		<position>contact</position>
 		<position>footer</position>
 	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="google">
+				<field name="tagmanager" type="textbox" default="" label="TPL_GILEBA_GOOGLE_TAGMANAGER" description="TPL_GILEBA_GOOGLE_TAGMANAGER_DESC" />
+			</fieldset>
+		</fields>
+	</config>
 </extension>

@@ -50,8 +50,31 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<jdoc:include type="head" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
+<?php	if ($this->params->get('tagmanager')) {	?>
+<!-- Google Tag Manager -->
+	<script>
+		(function(w,d,s,l,i){
+			w[l]=w[l]||[];
+			w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+			var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+			j.async=true;
+			j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+			f.parentNode.insertBefore(j,f);
+		})
+		(window,document,'script','dataLayer','<?php	echo $this->params->get('tagmanager'); ?>');
+	</script>
+	<!-- End Google Tag Manager -->
+		<?php }; ?>
 </head>
 <body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?> <?php echo mobile_user_agent_switch(); ?>">
+<?php	if ($this->params->get('tagmanager')) {	?>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=<?php	echo $this->params->get('tagmanager'); ?>" height="0" width="0" style="display:none; visibility:hidden">	
+		</iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+<?php }; ?>
 	<div class="container">
 		<div class="top">
 			<div class="logo">
