@@ -70,7 +70,8 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 <?php	if ($this->params->get('tagmanager')) {	?>
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=<?php	echo $this->params->get('tagmanager'); ?>" height="0" width="0" style="display:none; visibility:hidden">	
+		<iframe src="https://www.googletagmanager.com/ns.html?id=<?php	echo $this->params->get('tagmanager'); ?>" 
+			height="0" width="0" style="display:none; visibility:hidden;">	
 		</iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
