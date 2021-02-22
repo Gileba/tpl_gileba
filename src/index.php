@@ -64,7 +64,7 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 		(window,document,'script','dataLayer','<?php	echo $this->params->get('tagmanager'); ?>');
 	</script>
 	<!-- End Google Tag Manager -->
-		<?php }; ?>
+<?php }; ?>
 </head>
 <body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?> <?php echo mobile_user_agent_switch(); ?>">
 <?php	if ($this->params->get('tagmanager')) {	?>
