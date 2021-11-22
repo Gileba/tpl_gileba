@@ -36,14 +36,31 @@ ul {
 	padding-inline-start: 0;
 }
 
+li {
+	background-image: url('../images/list.png');
+	background-repeat: no-repeat;
+	padding: 2px 0 15px 20px;
+	min-height: 25px;
+	list-style-type: none;
+}
+
 input, textarea {
 	border: solid var(--global-color-black) 1px !important;
 	background-color: transparent;
 	font-size: 1em;
 }
 
-img {
-	width: 100%;
+h1 {
+	font-size: 1.6em;
+	text-transform: uppercase;
+	color: var(--global-color-primary);
+	margin-block-end: 0;
+	margin-block-start: 0;
+}
+
+h2 {
+	font-size: 1.33em;
+	font-weight: bolder;
 }
 
 .top, .component, .home > div:not(.intro), .contact .moduletable, .footer .custom {
@@ -69,7 +86,6 @@ img {
 }
 
 .navigation .nav {
-	list-style: none;
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: flex-end;
@@ -77,21 +93,32 @@ img {
 
 .navigation .nav li {
 	margin-left: var(--space-medium);
+	background-image: none;
 }
 
-h1 {
-	font-size: 1.6em;
-	text-transform: uppercase;
+.component .item-page {
 	color: var(--global-color-primary);
-	margin-block-end: 0;
-	margin-block-start: 0;
 }
 
-h2 {
-	font-size: 1.33em;
+.component .item-page .introtext p {
 	font-weight: bolder;
+	line-height: 1.7em;
 }
 
+.component .item-page hr {
+	border: 2px solid var(--global-color-tertiary);
+	width: var(--space-medium);
+	margin: 5px 0 var(--space-medium);
+}
+
+.component .item-page h1 {
+	text-transform: none;
+}
+
+.component .item-page a {
+	color: var(--global-color-primary);
+}
+	
 .intro {
 	height: 400px;
 	background-position: center;
@@ -126,7 +153,7 @@ h2 {
 	font-size: 0.6em;
 	color: var(--global-color-primary);
 	font-style: italic;
-	margin: var(--space-small);
+	margin: var(--space-small) var(--space-small) calc(var(--space-small) * 2) var(--space-small);
 }
 
 .footer a {
@@ -141,10 +168,22 @@ h2 {
 	text-align: center;
 }
 
+.home li {
+	background-image: none;
+}
+
 .home .category-module {
 	display: flex;
 	flex-wrap: nowrap;
 	list-style: none;
+}
+
+.component .main-image {
+	text-align: center;
+}
+
+.home .item-image img {
+	width: auto;
 }
 
 .home .category-module li {
@@ -237,6 +276,10 @@ h2 {
 	cursor: pointer;
 }
 
+.form .convertforms {
+	background-color: none !important;
+}
+
 .cf-field-hp {
 	display: none;
 }
@@ -298,6 +341,14 @@ h2 {
 	.contact button {
 		background-color: var(--dark-background);
 	}
+	
+	.component .item-page {
+		color: white;
+	}
+	
+	.component .item-page a {
+		color: white;
+	}
 }
 
 @media screen and (max-width: 599px) {
@@ -340,6 +391,7 @@ h2 {
 .wrapper-2-columns {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: var(--space-medium);
 }
 
 .wrapper-2-columns > * {

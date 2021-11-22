@@ -44,7 +44,7 @@ if(!function_exists('mobile_user_agent_switch')){
 ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
+<html xmlns="http://www.w3.org/1999/xhtml"
 xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,14 +64,31 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 		(window,document,'script','dataLayer','<?php	echo $this->params->get('tagmanager'); ?>');
 	</script>
 	<!-- End Google Tag Manager -->
+	<script>
+jQuery( document ).ready(function() {
+	var images = document.getElementsByClassName('main-image');
+	var index;
+	var image_height;
+	var intro_height;
+
+	for (index = 0; index < images.length; index++) {
+		image_height = images[index].clientHeight;
+		intro_height = document.getElementsByClassName('text-container')[index].clientHeight;
+
+		if (image_height > intro_height) {
+			document.getElementsByClassName('main-image')[index].getElementsByTagName("img")[0].height = intro_height;
+		}
+	}
+});
+	</script>
 <?php }; ?>
 </head>
 <body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?> <?php echo mobile_user_agent_switch(); ?>">
 <?php	if ($this->params->get('tagmanager')) {	?>
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=<?php	echo $this->params->get('tagmanager'); ?>" 
-			height="0" width="0" style="display:none; visibility:hidden;">	
+		<iframe src="https://www.googletagmanager.com/ns.html?id=<?php	echo $this->params->get('tagmanager'); ?>"
+			height="0" width="0" style="display:none; visibility:hidden;">
 		</iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
