@@ -15,6 +15,7 @@ $pageclass = "";
 if ($menu->getActive() != null) {
 	$pageclass 	= $menu->getActive()->getParams(true)->get('pageclass_sfx');
 }
+
 // Logo file or site title param
 $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
 

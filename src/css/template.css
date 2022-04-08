@@ -137,6 +137,53 @@ h3 {
 	color: var(--global-color-primary);
 }
 
+.formulier .page-header h2 {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.formulier .com-content-article__body {
+	width: 80%;
+	margin: auto;
+}
+
+.formulier .convertforms {
+	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
+	width: 80%;
+	margin: 2em auto;
+	padding: 20px 40px;
+	color: white;
+}
+
+.formulier .convertforms a {
+	color: white;
+}
+
+.formulier .convertforms input {
+	color: white;
+}
+
+.formulier .convertforms input::placeholder {
+	color: white;
+}
+
+.formulier #cf_2 .cf-control-label {
+	margin-top: 30px;
+}
+
+.formulier #cf_2 .cf-one-half .cf-control-input {
+	width: 80%;
+	margin: 10px 0 30px;
+}
+
+.cf-one-half {
+	width: 50%;
+}
+
+.cf-success .cf-fields {
+	display: none;
+}
+
 .home {
 	margin-bottom: var(--space-large);
 }
@@ -380,49 +427,3 @@ button {
 	width: 45%;
 }
 
-.formulier .page-header h2 {
-	text-align: center;
-	margin-bottom: 2em;
-}
-
-.formulier .com-content-article__body {
-	width: 80%;
-	margin: auto;
-}
-
-.formulier .convertforms {
-	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
-	width: 80%;
-	margin: 2em auto;
-	padding: 20px 40px;
-	color: white;
-}
-
-.formulier .convertforms a {
-	color: white;
-}
-
-.formulier .convertforms input {
-	color: white;
-}
-
-.formulier .convertforms input::placeholder {
-	color: white;
-}
-
-.formulier #cf_2 .cf-control-label {
-	margin-top: 30px;
-}
-
-.formulier #cf_2 .cf-one-half .cf-control-input {
-	width: 80%;
-	margin: 10px 0 30px;
-}
-
-.cf-one-half {
-	width: 50%;
-}
-
-.cf-success .cf-fields {
-	display: none;
-}
