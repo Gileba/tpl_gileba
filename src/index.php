@@ -11,7 +11,10 @@ $this->setHtml5(true);
 $menu 		= $app->getMenu();
 $params		= $app->getTemplate(true)->params;
 $config 	= JFactory::getConfig();
-$pageclass 	= $menu->getActive()->getParams(true)->get('pageclass_sfx');
+$pageclass = "";
+if ($menu->getActive() != null) {
+	$pageclass 	= $menu->getActive()->getParams(true)->get('pageclass_sfx');
+}
 
 // Logo file or site title param
 $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
@@ -88,7 +91,7 @@ jQuery( document ).ready(function() {
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=<?php	echo $this->params->get('tagmanager'); ?>"
-			height="0" width="0" style="display:none; visibility:hidden;">
+			height="0" width="0" style="display: none; visibility: hidden;">
 		</iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
