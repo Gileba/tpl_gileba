@@ -1,6 +1,7 @@
 @font-face {
 	font-family: "MuseoSans-500";
-	src: url('../webfonts/museosans-500/font.woff2') format('woff2'), url('../webfonts/museosans-500/font.woff') format('woff');
+	src: url("../webfonts/museosans-500/font.woff2") format("woff2"),
+		url("../webfonts/museosans-500/font.woff") format("woff");
 }
 
 :root {
@@ -36,17 +37,19 @@ ul {
 	padding-inline-start: 0;
 }
 
-input, textarea {
+input,
+textarea {
 	border: solid var(--global-color-black) 1px !important;
 	background-color: transparent;
 	font-size: 1em;
+	padding: 5px 10px;
 }
 
-img {
-	width: 100%;
-}
-
-.top, .component, .home > div:not(.intro), .contact .moduletable, .footer .custom {
+.top,
+.component,
+.home > div:not(.intro),
+.contact .moduletable,
+.footer .custom {
 	max-width: 940px;
 	margin: auto;
 }
@@ -79,7 +82,7 @@ img {
 	margin-left: var(--space-medium);
 }
 
-h1 {
+h2 {
 	font-size: 1.6em;
 	text-transform: uppercase;
 	color: var(--global-color-primary);
@@ -87,12 +90,12 @@ h1 {
 	margin-block-start: 0;
 }
 
-h2 {
+h3 {
 	font-size: 1.33em;
 	font-weight: bolder;
 }
 
-.intro {
+.intro .custom {
 	height: 400px;
 	background-position: center;
 	background-size: cover;
@@ -120,6 +123,7 @@ h2 {
 
 .intro .cirkel .baseline {
 	margin-top: -20px;
+	font-size: 1em;
 }
 
 .footer {
@@ -137,7 +141,7 @@ h2 {
 	margin-bottom: var(--space-large);
 }
 
-.home h1 {
+.home h2 {
 	text-align: center;
 }
 
@@ -152,14 +156,16 @@ h2 {
 	width: 50%;
 }
 
-.home .category-module li .mod-articles-category-readmore, button {
+.home .category-module li .mod-articles-category-readmore,
+button {
 	margin-top: var(--space-small);
 	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
 	width: fit-content;
 	padding: 8px 3px;
 }
 
-.home .category-module li .mod-articles-category-readmore a, button {
+.home .category-module li .mod-articles-category-readmore a,
+button {
 	color: white;
 	text-transform: uppercase;
 	padding: 5px;
@@ -184,17 +190,20 @@ h2 {
 	display: flex;
 }
 
-.contact .custom .data, .contact .custom .form {
+.contact .custom .data,
+.contact .custom .form {
 	width: 50%;
 }
 
-.contact h1 {
+.contact h2 {
 	text-align: center;
 	padding: var(--space-medium) 0;
 	color: white;
 }
 
-.contact .data .name, .contact .data .adres, .contact .data .telefoon {
+.contact .data .name,
+.contact .data .adres,
+.contact .data .telefoon {
 	margin-bottom: var(--space-small);
 }
 
@@ -207,12 +216,15 @@ h2 {
 	font-size: 0.7em;
 }
 
-.contact .form input::placeholder, .contact .form textarea::placeholder {
+.contact .form input::placeholder,
+.contact .form textarea::placeholder {
 	color: white;
 	font-family: "MuseoSans-500";
 }
 
-.contact .form div[data-name="firstname"], .contact .form div[data-name="lastname"], .contact .form div[data-name="privacy"], .contact .form div[data-name^="submit"] {
+.contact .form div[data-name="firstname"],
+.contact .form div[data-name="lastname"],
+.contact .form div[data-name="privacy"] {
 	width: 50%;
 }
 
@@ -220,7 +232,8 @@ h2 {
 	margin-right: 10px;
 }
 
-.contact button {
+.contact button,
+.formulier button {
 	background-image: none;
 	-webkit-appearance: button-bevel;
 	-moz-appearance: button-bevel;
@@ -266,14 +279,20 @@ h2 {
 		color: white;
 	}
 
-	input, textarea {
+	a {
+		text-decoration: none;
+		color: white;
+	}
+
+	input,
+	textarea {
 		border: solid var(--dark-background) 1px !important;
 	}
 
 	.intro .cirkel {
 		background-color: var(--dark-background);
 	}
-	
+
 	.navigation a {
 		color: white;
 	}
@@ -291,12 +310,18 @@ h2 {
 		background-image: none;
 	}
 
-	.contact h1 {
+	.contact h2 {
 		color: white;
 	}
 
-	.contact button {
+	.contact button,
+	.formulier button {
 		background-color: var(--dark-background);
+	}
+
+	.formulier .convertforms.cf {
+		background-color: var(--global-color-black);
+		background-image: none;
 	}
 }
 
@@ -308,26 +333,31 @@ h2 {
 	.home .category-module {
 		flex-wrap: wrap;
 	}
-	
+
 	.home .category-module li {
 		width: 100%;
 	}
-	
+
 	.contact .custom {
 		flex-wrap: wrap;
 	}
-	
-	.contact .custom .data, .contact .custom .form {
+
+	.contact .custom .data,
+	.contact .custom .form {
 		width: 100%;
 	}
-	
+
 	.contact .custom .form {
-		margin-top: var(--space-medium);	
+		margin-top: var(--space-medium);
 	}
 }
 
 @media screen and (min-width: 1400px) {
-	.top, .home > div:not(.intro), .component, .contact .moduletable, .footer .custom {
+	.top,
+	.home > div:not(.intro),
+	.component,
+	.contact .moduletable,
+	.footer .custom {
 		max-width: 1200px;
 		margin: auto;
 	}
@@ -337,6 +367,10 @@ h2 {
 	margin: var(--space-large) auto 0;
 }
 
+.home > div.moduletable.intro {
+	margin: var(--space-small) auto 0;
+}
+
 .wrapper-2-columns {
 	display: flex;
 	justify-content: space-between;
@@ -344,4 +378,51 @@ h2 {
 
 .wrapper-2-columns > * {
 	width: 45%;
+}
+
+.formulier .page-header h2 {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.formulier .com-content-article__body {
+	width: 80%;
+	margin: auto;
+}
+
+.formulier .convertforms {
+	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
+	width: 80%;
+	margin: 2em auto;
+	padding: 20px 40px;
+	color: white;
+}
+
+.formulier .convertforms a {
+	color: white;
+}
+
+.formulier .convertforms input {
+	color: white;
+}
+
+.formulier .convertforms input::placeholder {
+	color: white;
+}
+
+.formulier #cf_2 .cf-control-label {
+	margin-top: 30px;
+}
+
+.formulier #cf_2 .cf-one-half .cf-control-input {
+	width: 80%;
+	margin: 10px 0 30px;
+}
+
+.cf-one-half {
+	width: 50%;
+}
+
+.cf-success .cf-fields {
+	display: none;
 }

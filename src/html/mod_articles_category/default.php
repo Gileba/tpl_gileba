@@ -21,15 +21,15 @@ defined('_JEXEC') or die;
 						<div>
 							<?php echo JLayoutHelper::render('joomla.content.intro_image', $item); ?>
 						</div>
-						<h2>
+						<h3>
 						<?php if ($params->get('link_titles') == 1) : ?>
 							<a class="mod-articles-category-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
-								<?php echo $item->title; ?>
+								<span style="display: none">GILEBA - </span><?php echo $item->title; ?>
 							</a>
 						<?php else : ?>
-							<?php echo $item->title; ?>
+							<span style="display: none">GILEBA - </span><?php echo $item->title; ?>
 						<?php endif; ?>
-						</h2>
+						</h3>
 
 						<?php if ($item->displayHits) : ?>
 							<span class="mod-articles-category-hits">
@@ -96,15 +96,15 @@ defined('_JEXEC') or die;
 				<div>
 					<?php echo JLayoutHelper::render('joomla.content.intro_image', $item); ?>
 				</div>
-				<h2>
+				<h3>
 				<?php if ($params->get('link_titles') == 1) : ?>
 					<a class="mod-articles-category-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
-						<?php echo $item->title; ?>
+						<span style="display: none">GILEBA - </span><?php echo $item->title; ?>
 					</a>
 				<?php else : ?>
-					<?php echo $item->title; ?>
+					<span style="display: none">GILEBA - </span><?php echo $item->title; ?>
 				<?php endif; ?>
-				</h2>
+				</h3>
 
 				<?php if ($item->displayHits) : ?>
 					<span class="mod-articles-category-hits">

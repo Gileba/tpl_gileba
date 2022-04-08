@@ -11,7 +11,10 @@ $this->setHtml5(true);
 $menu 		= $app->getMenu();
 $params		= $app->getTemplate(true)->params;
 $config 	= JFactory::getConfig();
-$pageclass 	= $menu->getActive()->getParams(true)->get('pageclass_sfx');
+$pageclass = "";
+if ($menu->getActive() != null) {
+	$pageclass 	= $menu->getActive()->getParams(true)->get('pageclass_sfx');
+}
 
 // Logo file or site title param
 $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
@@ -44,7 +47,7 @@ if(!function_exists('mobile_user_agent_switch')){
 ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
+<html xmlns="http://www.w3.org/1999/xhtml"
 xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,8 +73,8 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 <?php	if ($this->params->get('tagmanager')) {	?>
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=<?php	echo $this->params->get('tagmanager'); ?>" 
-			height="0" width="0" style="display:none; visibility:hidden;">	
+		<iframe src="https://www.googletagmanager.com/ns.html?id=<?php	echo $this->params->get('tagmanager'); ?>"
+			height="0" width="0" style="display: none; visibility: hidden;">
 		</iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
