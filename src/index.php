@@ -67,6 +67,23 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 		(window,document,'script','dataLayer','<?php	echo $this->params->get('tagmanager'); ?>');
 	</script>
 	<!-- End Google Tag Manager -->
+	<script>
+jQuery( document ).ready(function() {
+	var images = document.getElementsByClassName('main-image');
+	var index;
+	var image_height;
+	var intro_height;
+
+	for (index = 0; index < images.length; index++) {
+		image_height = images[index].clientHeight;
+		intro_height = document.getElementsByClassName('text-container')[index].clientHeight;
+
+		if (image_height > intro_height) {
+			document.getElementsByClassName('main-image')[index].getElementsByTagName("img")[0].height = intro_height;
+		}
+	}
+});
+	</script>
 <?php }; ?>
 </head>
 <body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?> <?php echo mobile_user_agent_switch(); ?>">
