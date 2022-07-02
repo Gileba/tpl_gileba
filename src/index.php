@@ -100,10 +100,11 @@ jQuery( document ).ready(function() {
 				<jdoc:include type="modules" name="nav" style="none" />
 			</div>
 		</div>
+		<?php if ($menu->getActive() == $menu->getDefault()) : ?>
 		<div class="home">
-			<?php if ($menu->getActive() == $menu->getDefault()) : ?><jdoc:include type="modules" name="home" style="none" /><?php
-			endif ?>
+			<jdoc:include type="modules" name="home" style="none" />
 		</div>
+		<?php endif ?>
 		<div class="component">
 			<?php if ($menu->getActive() != $menu->getDefault()) : ?><jdoc:include type="component" style="none" /><?php
 			endif ?>
