@@ -13,8 +13,11 @@
 	--space-small: 20px;
 	--space-medium: 45px;
 	--space-large: 120px;
-	font-family: "MuseoSans-500";
-	font-size: 15px;
+	--gradient: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
+	--bs-body-font-family: "MuseoSans-500";
+	--bs-body-font-size: 1rem;
+	font-family: var(--bs-body-font-family);
+	font-size: var(--bs-body-font-size);
 	color: var(--global-color-black);
 }
 
@@ -69,7 +72,7 @@ h2 {
 .top,
 .component,
 .home > div:not(.intro),
-.contact .moduletable,
+.contact .moduletable, .contact .osm-container,
 .footer .custom {
 	max-width: 940px;
 	margin: auto;
@@ -136,7 +139,15 @@ h3 {
 .component .item-page a {
 	color: var(--global-color-primary);
 }
-	
+
+.component .item-page .com-content-article__body .wrapper-2-columns {
+	margin-bottom: var(--space-large);
+}
+
+.component .blog {
+	padding: var(--space-small) var(--space-small) calc(var(--space-small) * 2) var(--space-small);
+}
+
 .intro .custom {
 	height: 400px;
 	background-position: center;
@@ -214,15 +225,15 @@ h3 {
 }
 
 .home .category-module li .mod-articles-category-readmore,
-button {
+button, .btn {
 	margin-top: var(--space-small);
-	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
+	background-image: var(--gradient);
 	width: fit-content;
 	padding: 8px 3px;
 }
 
 .home .category-module li .mod-articles-category-readmore a,
-button {
+button, .btn {
 	color: white;
 	text-transform: uppercase;
 	padding: 5px;
@@ -372,6 +383,7 @@ button {
 	.contact {
 		background-color: var(--global-color-black);
 		background-image: none;
+
 	}
 
 	.contact h2 {
@@ -379,16 +391,17 @@ button {
 	}
 
 	.contact button,
-	.formulier button {
+	.formulier button, .btn {
 		background-color: var(--dark-background);
 	}
-	
+
 	.component .item-page {
 		color: white;
 	}
-	
+
 	.component .item-page a {
 		color: white;
+	}
 
 	.formulier .convertforms.cf {
 		background-color: var(--global-color-black);
@@ -396,7 +409,7 @@ button {
 	}
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 959px) {
 	.home .moduletable {
 		margin: var(--space-large) var(--space-small) 0;
 	}
@@ -423,11 +436,22 @@ button {
 	}
 }
 
+@media screen and (max-width: 959px) and (min-width: 600px) {
+	.top,
+	.home > div:not(.intro),
+	.component,
+	.contact .moduletable, .contact .osm-container,
+	.footer .custom {
+		max-width: 500px;
+		margin: auto;
+	}
+}
+
 @media screen and (min-width: 1400px) {
 	.top,
 	.home > div:not(.intro),
 	.component,
-	.contact .moduletable,
+	.contact .moduletable, .contact .osm-container,
 	.footer .custom {
 		max-width: 1200px;
 		margin: auto;
@@ -492,4 +516,158 @@ button {
 
 .cf-success .cf-fields {
 	display: none;
+}
+
+.osm-container {
+	padding-top: var(--space-medium);
+}
+
+.osm-page-title {
+	display: none;
+}
+
+.osm-pricing-table {
+	display: flex;
+	justify-content: center;
+}
+
+.osm-pricing-table .osm-plan .osm-plan-header, .osm-pricing-table .osm-plan .osm-plan-price {
+	padding: 0;
+}
+
+.osm-pricing-table .col-md-4 {
+	width: 42%;
+}
+
+.osm-pricing-table .osm-plan ul {
+	color: var(--global-color-black);
+	text-align: left;
+	margin: auto;
+}
+
+.osm-container .osm-pricing-table .osm-plan .osm-plan-header {
+	background-color: var(--dark-background);
+}
+
+.osm-container .osm-pricing-table .osm-plan.osm-plan-recommended .osm-plan-header {
+	background-color: var(--global-color-tertiary);
+}
+
+.osm-container .osm-pricing-table .osm-plan.osm-plan-recommended .osm-plan-header h2 {
+	color: var(--global-color-black) !important;
+}
+
+.osm-container .osm-pricing-table .osm-plan .osm-plan-price {
+	background-color: var(--global-color-primary);
+	margin-top: -5px;
+}
+
+.osm-container .osm-pricing-table .osm-plan.osm-plan-recommended .osm-plan-price {
+	background-color: var(--global-color-secondary);
+}
+
+.osm-plan-price .price {
+	display: block;
+}
+
+.osm-plan-short-description {
+	margin: var(--space-small);
+}
+
+.osm-pricing-table .osm-plan ul.osm-signup-container {
+	background-color: var(--dark-background);
+	text-align: center;
+	padding: var(--space-small) 0;
+}
+
+#osm-plans-list-columns .osm-pricing-table {
+	max-width: 720px;
+	margin: auto;
+}
+
+.osm-signup-container li {
+	background-image: none;
+	padding-bottom: 5px;
+}
+
+.osm-container form.form > input {
+	display: none;
+}
+
+.osm-container form.form div.row {
+	display: flex;
+}
+
+.osm-container h3 {
+	color: var(--global-color-primary);
+	padding-top: var(--space-small);
+}
+
+.osm-container h3.eb-heading {
+	margin-top: var(--space-medium);
+	border-top: 1px solid var(--global-color-primary);
+}
+
+.col-md-6 {
+	width: 50%;
+	border: 1px solid var(--global-color-primary);
+	margin-bottom: var(--space-small);
+}
+
+@media screen and (max-width: 990px) {
+	.osm-container form.form div.row {
+		display: block;
+	}
+	.col-md-6 {
+		width: 100%;
+	}
+
+	.form-actions .btn {
+		margin-bottom: var(--space-small);
+	}
+}
+
+.osm-container form.form div.row.osm-captcha-container, .osm-container form.form div.row.payment_information {
+	display: none;
+}
+
+.form-row .form-control-label {
+	width: 200px;
+}
+
+.form-horizontal .nav {
+	display: block;
+}
+
+.form-horizontal > div {
+	gap: var(--space-medium);
+}
+
+.form-horizontal > div > div {
+	flex: 1;
+}
+
+.form-horizontal .nav.nav-tabs {
+	border-bottom: none;
+}
+
+.form-horizontal .nav li {
+	display: block;
+	background-image: none;
+}
+
+.osm-container .eb-form-control {
+	flex: 1;
+}
+
+.input-group-text {
+	border: solid var(--dark-background) 1px;
+}
+
+#osm-forgot-username-password {
+	font-size: 0.7rem;
+}
+
+#osm-forgot-username-password li {
+	display: inline-block;
 }
