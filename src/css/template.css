@@ -172,7 +172,10 @@ h3 {
 	font-size: 0.6em;
 	color: var(--global-color-primary);
 	font-style: italic;
-	margin: var(--space-small) var(--space-small) calc(var(--space-small) * 2) var(--space-small);
+	padding: var(--space-small) var(--space-small) calc(var(--space-small) * 2) var(--space-small);
+	border-image-width: 5px 0 0;
+	border-image-source: var(--gradient);
+	border-image-slice: 1;
 }
 
 .footer a {
@@ -231,8 +234,8 @@ button {
 }
 
 .contact {
-	padding: 0 var(--space-small) var(--space-medium);
-	background-image: linear-gradient(to right, var(--global-color-primary), var(--global-color-secondary));
+	padding: 0 var(--space-small) calc(var(--space-small) / 4);
+	background-image: var(--gradient);
 	color: white;
 }
 
@@ -306,6 +309,7 @@ button {
 
 .form .convertforms {
 	background-color: none !important;
+	margin-bottom: var(--space-small);
 }
 
 .cf-field-hp {
@@ -357,6 +361,8 @@ button {
 
 	.footer {
 		color: var(--global-color-secondary);
+		border-image-source: none;
+		border-top: 5px solid var(--global-color-black);
 	}
 
 	.footer a {

@@ -109,11 +109,9 @@ jQuery( document ).ready(function() {
 			endif ?>
 		</div>
 	</div>
-	<?php if ($menu->getActive() == $menu->getDefault()) : ?>
 	<div id="contact" class="contact">
 		<jdoc:include type="modules" name="contact" style="none" />
 	</div>
-	<?php endif ?>
 	<div class="footer">
 		<jdoc:include type="modules" name="footer" style="none" />
 	</div>
