@@ -7,6 +7,7 @@ use Joomla\CMS\Factory;
 $app      	= Factory::getApplication();
 $menu 		= $app->getMenu();
 $params		= $app->getTemplate(true)->params;
+$lang 		= $app->getLanguage();
 $pageclass = "";
 if ($menu->getActive() != null) {
 	$pageclass 	= $menu->getActive()->getParams(true)->get('pageclass_sfx');
@@ -101,13 +102,13 @@ jQuery( document ).ready(function() {
 				<jdoc:include type="modules" name="nav" style="none" />
 			</div>
 		</div>
-		<?php if ($menu->getActive() == $menu->getDefault()) : ?>
+		<?php if ($menu->getActive() == $menu->getDefault($lang->getTag())) : ?>
 		<div class="home">
 			<jdoc:include type="modules" name="home" style="none" />
 		</div>
 		<?php endif ?>
 		<div class="component">
-			<?php if ($menu->getActive() != $menu->getDefault()) : ?><jdoc:include type="component" style="none" /><?php
+			<?php if ($menu->getActive() != $menu->getDefault($lang->getTag())) : ?><jdoc:include type="component" style="none" /><?php
 			endif ?>
 		</div>
 	</div>
