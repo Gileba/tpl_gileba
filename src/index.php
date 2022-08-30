@@ -44,6 +44,7 @@ if(!function_exists('mobile_user_agent_switch')){
 xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="/templates/<?php echo $this->template; ?>/images/favicon.png" />
 	<jdoc:include type="head" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
 <?php	if ($this->params->get('tagmanager')) {	?>
