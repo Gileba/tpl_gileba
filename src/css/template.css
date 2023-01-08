@@ -492,15 +492,31 @@ button, .btn {
 	margin: var(--space-small) auto 0;
 }
 
-.wrapper-2-columns {
-	display: flex;
-	justify-content: space-between;
+@media screen and (min-width: 900px) {
+	.wrapper-2-columns {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.wrapper-2-columns > * {
+		width: 45%;
+	}
 }
 
-.wrapper-2-columns > * {
-	width: 45%;
-}
+@media screen and (max-width: 900px) {
+	.wrapper-2-columns {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
+	.wrapper-2-columns > * {
+		width: 100%;
+	}
+	.wrapper-2-columns .main-image {
+		order: 2;
+	}
+}
+}
 .formulier .page-header h2 {
 	text-align: center;
 	margin-bottom: 2em;
