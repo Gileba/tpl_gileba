@@ -25,6 +25,7 @@
 	</languages>
 	<positions>
 		<position>nav</position>
+		<position>intro</position>
 		<position>home</position>
 		<position>contact</position>
 		<position>footer</position>
@@ -32,7 +33,8 @@
 	<config>
 		<fields name="params">
 			<fieldset name="google" label="TPL_GILEBA_GOOGLE">
-				<field name="tagmanager" type="textbox" default="" label="TPL_GILEBA_GOOGLE_TAGMANAGER" description="TPL_GILEBA_GOOGLE_TAGMANAGER_DESC" />
+				<field name="tagmanager" type="textbox" default="" label="TPL_GILEBA_GOOGLE_TAGMANAGER"
+				description="TPL_GILEBA_GOOGLE_TAGMANAGER_DESC" />
 			</fieldset>
 		</fields>
 	</config>
