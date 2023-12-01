@@ -284,10 +284,11 @@ h3 {
 .blog .blog-items {
 	display: flex;
 	gap: 100px;
+	flex-wrap: wrap;
 }
 
 .blog .blog-items .blog-item {
-	flex-basis: 50%;
+	flex-basis: 45%;
 }
 
 .intro .custom {
