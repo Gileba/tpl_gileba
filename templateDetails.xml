@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="4.0" type="template" client="site">
+<extension version="5.0" type="template" client="site">
 	<name>gileba</name>
-	<version>1.0.0-dev.1</version>
-	<creationDate>16/03/2018</creationDate>
+	<version>1.0.0</version>
+	<creationDate>2023-12-01</creationDate>
 	<author>Gijs Lamon</author>
 	<authorEmail>info@gileba.be</authorEmail>
 	<copyright>Copyright (C) 2018 Gijs Lamon. All rights reserved.</copyright>
