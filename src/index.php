@@ -52,6 +52,7 @@ xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" 
 	<jdoc:include type="head" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
 <?php if ($this->params->get("tagmanager")) { ?>
+	<link rel="stylesheet" href="<?php echo $this->baseurl; ?>/media/system/css/joomla-fontawesome.min.css" />
 <!-- Google Tag Manager -->
 	<script>
 		(function(w,d,s,l,i){
