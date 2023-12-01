@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="5.0" type="template" client="site">
 	<name>gileba</name>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<creationDate>2023-12-01</creationDate>
 	<author>Gijs Lamon</author>
 	<authorEmail>info@gileba.be</authorEmail>

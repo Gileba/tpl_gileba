@@ -379,6 +379,10 @@ h3 {
 	width: 33%;
 }
 
+.home .columns-3 .category-module li img {
+	height: auto;
+}
+
 .home .category-module li .mod-articles-category-readmore,
 button,
 .btn {

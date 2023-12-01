@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.9.24" type="template" method="upgrade">
+<extension version="4.0.0" type="template" method="upgrade">
 	<name>tpl_gileba</name>
-	<creationDate>2021-02-09</creationDate>
+	<creationDate>2023-12-01</creationDate>
 	<author>Gijs Lamon</author>
 	<authorEmail>info@gileba.be</authorEmail>
 	<authorUrl>http://www.gileba.be/</authorUrl>
 	<copyright>(c) 2021 by Gileba</copyright>
 	<license>GNU/GPL</license>
-	<version>1.0.0-dev.1</version>
+	<version>1.0.1</version>
 	<description>Gileba</description>
 	<folders>
 		<folder>css</folder>
