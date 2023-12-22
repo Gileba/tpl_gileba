@@ -1,0 +1,55 @@
+.osm-container {
+	#osm-signup-page-columns-form form.form div.row {
+		@media screen and (max-width: 1400px) {
+			flex-wrap: wrap;
+		}
+
+		.col-md-5 {
+			@media screen and (max-width: 1400px) {
+				width: 100%;
+				order: 1;
+			}
+			width: 40%;
+		}
+		.col-md-7 {
+			@media screen and (max-width: 1400px) {
+				width: 100%;
+				order: 2;
+			}
+			width: 60%;
+		}
+	}
+	.form-group select {
+		padding: 5px;
+		width: 250px;
+	}
+	#osm-forgot-username-password {
+		font-size: 0.8rem;
+
+		ul {
+			padding-inline-start: 40px;
+		}
+	}
+
+	.input-group {
+		.input-password-toggle {
+			margin-top: 0;
+			padding: 9px 10px 7px;
+			margin-left: -5px;
+			border: none;
+		}
+	}
+
+	table {
+		width: 100%;
+
+		th {
+			text-align: left;
+			color: var(--global-color-primary);
+		}
+
+		td {
+			padding: 10px 0;
+		}
+	}
+}

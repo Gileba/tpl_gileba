@@ -277,7 +277,7 @@ h3 {
   margin-bottom: var(--space-large);
 }
 
-.component .blog {
+.component {
   padding: var(--space-small) var(--space-small) calc(var(--space-small) * 2) var(--space-small);
 }
 
@@ -851,20 +851,7 @@ textarea {
   border-top: 1px solid var(--global-color-primary);
 }
 
-.col-md-6 {
-  width: 50%;
-  border: 1px solid var(--global-color-primary);
-  margin-bottom: var(--space-small);
-  padding: 0 20px;
-}
-
 @media screen and (max-width: 990px) {
-  .osm-container form.form div.row {
-    display: block;
-  }
-  .col-md-6 {
-    width: 100%;
-  }
   .form-actions .btn {
     margin-bottom: var(--space-small);
   }
@@ -907,14 +894,6 @@ textarea {
   border: solid var(--dark-background) 1px;
 }
 
-#osm-forgot-username-password {
-  font-size: 0.7rem;
-}
-
-#osm-forgot-username-password li {
-  display: inline-block;
-}
-
 .visually-hidden {
   display: none;
 }
@@ -947,6 +926,9 @@ ul.lang-inline li {
   border-radius: 20px;
   padding: 20px;
 }
+.sclogin-modal [class^=icon-] {
+  color: white;
+}
 
 .sclogin-modal .btn-close {
   display: none;
@@ -968,6 +950,14 @@ ul.lang-inline li {
 .form-sclogin-remember {
   margin-top: 20px;
 }
+.form-sclogin-remember input.form-check-input {
+  height: 1.4em;
+  width: 1.4em;
+  margin-top: -2px;
+}
+.form-sclogin-remember input.form-check-input:checked {
+  background-color: var(--global-color-primary);
+}
 
 .ns-bs5 .form-check-input {
   margin-top: 0;
@@ -977,6 +967,14 @@ ul.lang-inline li {
 
 span.input-group-text {
   border: solid var(--dark-background) 1px !important;
+}
+
+.osm-addon-container span.input-group-text,
+.osm-addon-container input {
+  border: none !important;
+  padding: 0;
+  color: var(--global-color-primary);
+  font-weight: bold;
 }
 
 .ns-bs5 .btn-primary {

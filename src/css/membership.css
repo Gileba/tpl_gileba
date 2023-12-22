@@ -1,0 +1,51 @@
+@media screen and (max-width: 1400px) {
+  .osm-container #osm-signup-page-columns-form form.form div.row {
+    flex-wrap: wrap;
+  }
+}
+.osm-container #osm-signup-page-columns-form form.form div.row .col-md-5 {
+  width: 40%;
+}
+@media screen and (max-width: 1400px) {
+  .osm-container #osm-signup-page-columns-form form.form div.row .col-md-5 {
+    width: 100%;
+    order: 1;
+  }
+}
+.osm-container #osm-signup-page-columns-form form.form div.row .col-md-7 {
+  width: 60%;
+}
+@media screen and (max-width: 1400px) {
+  .osm-container #osm-signup-page-columns-form form.form div.row .col-md-7 {
+    width: 100%;
+    order: 2;
+  }
+}
+.osm-container .form-group select {
+  padding: 5px;
+  width: 250px;
+}
+.osm-container #osm-forgot-username-password {
+  font-size: 0.8rem;
+}
+.osm-container #osm-forgot-username-password ul {
+  padding-inline-start: 40px;
+}
+.osm-container .input-group .input-password-toggle {
+  margin-top: 0;
+  padding: 9px 10px 7px;
+  margin-left: -5px;
+  border: none;
+}
+.osm-container table {
+  width: 100%;
+}
+.osm-container table th {
+  text-align: left;
+  color: var(--global-color-primary);
+}
+.osm-container table td {
+  padding: 10px 0;
+}
+
+/*# sourceMappingURL=membership.css.map */

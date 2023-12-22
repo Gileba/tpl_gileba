@@ -16,6 +16,14 @@ if ($menu->getActive() != null) {
 		->get("pageclass_sfx");
 }
 
+$page = $app->getRouter()->getVars();
+
+$wa = $this->getWebAssetManager();
+switch ($page["option"]) {
+	case "com_osmembership":
+		$wa->useStyle("template.gileba.membership");
+}
+
 /*
  *	Mobile device detection
  */

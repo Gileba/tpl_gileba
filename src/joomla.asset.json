@@ -1,0 +1,14 @@
+{
+	"$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+	"name": "evolucie",
+	"version": "4.0.0",
+	"description": "Evolucie template",
+	"license": "GPL-2.0+",
+	"assets": [
+		{
+			"name": "template.gileba.membership",
+			"type": "style",
+			"uri": "membership.css"
+		}
+	]
+}
