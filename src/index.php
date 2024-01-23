@@ -109,7 +109,7 @@ jQuery( document ).ready(function() {
 		<div class="top">
 			<div class="logo">
 				<!-- FIX: use proper routing -->
-				<a href="/<?php echo substr($lang->getTag(), 0, 2); ?>">
+				<a href="/<?php echo substr($lang->getTag(), 0, 2); ?>/">
 					<img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/images/logo_liggend.png" alt="Gileba" />
 				</a>
 			</div>
