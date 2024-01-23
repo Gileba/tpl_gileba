@@ -125,12 +125,11 @@ jQuery( document ).ready(function() {
 			<jdoc:include type="modules" name="home" style="none" />
 		</div>
 		<?php endif; ?>
-		<div class="component">
-			<?php if (
-   	$menu->getActive() != $menu->getDefault($lang->getTag())
-   ): ?><jdoc:include type="component" style="none" /><?php endif; ?>
+			<?php if ($menu->getActive() != $menu->getDefault($lang->getTag())): ?>
+			<div class="component">
+<jdoc:include type="component" style="none" />
 		</div>
-	</div>
+<?php endif; ?>	</div>
 	<div id="contact" class="contact">
 		<jdoc:include type="modules" name="contact" style="none" />
 	</div>
