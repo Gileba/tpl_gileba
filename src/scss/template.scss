@@ -346,6 +346,24 @@ h3 {
 	margin-bottom: var(--space-medium);
 }
 
+.author {
+	font-style: italic;
+	text-align: right;
+}
+
+.review .text {
+	margin-bottom: 0;
+}
+
+.review .author {
+	margin-top: 0;
+	margin-bottom: var(--space-medium);
+}
+
+.review .star {
+	color: gold;
+}
+
 .home h2 {
 	text-align: center;
 }
